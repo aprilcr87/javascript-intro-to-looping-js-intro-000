@@ -21,10 +21,12 @@ function whileLoop(n){
 whileLoop();
 
 function doWhileLoop(array){
-var array = [];
+  function maybeTrue() {
+    return Math.random() >= 0.5
+  }
   do{
     array.shift();
-  }while()
+  }while(array.length > 0 && maybeTrue());
   return array;
 }
 doWhileLoop();
